@@ -82,8 +82,10 @@ class DLL:
 class IteratorDLL:
     def __init__(self, val):
         self.current = val
+
     def __iter__(self):
         return self
+
     def __next__(self):
         if self.current:
             value = self.current.item
