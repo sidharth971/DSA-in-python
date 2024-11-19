@@ -12,7 +12,7 @@ class Node:
 
 
 class SLL:
-    def __init__(self, head=None):
+    def __init__(self):
         self.head = head
 
     def insert_at_first(self, val):

@@ -2,6 +2,7 @@
 @Sidharth Sahoo
 Stack is a linear data stature which follows last in and fast out principle.
 '''
+from DSA.DSA_in_python.sll import SLL
 
 
 class StackUsingList(list):
@@ -72,6 +73,31 @@ class StackUsingLinkList:
         return self.count
 
 
+class StackUsingSLL(SLL):
+    def __init__(self):
+        super(StackUsingSLL, self).__init__()
+        self.count = 0
+
+    def push(self, val):
+        self.insert_at_first(val)
+        self.count += 1
+
+    def pop(self):
+        if not self.head:
+            raise IndexError('No record found')
+        val = self.head.item
+        self.head = self.head.next
+        return val
+
+    def peak(self):
+        if not self.head:
+            raise IndexError('No record found')
+        return self.head.item
+
+    def size(self):
+        return self.count
+
+
 if __name__ == "__main__":
     stack_list = StackUsingList()
     stack_list.push(10)
@@ -89,3 +115,12 @@ if __name__ == "__main__":
     print(stck_link_list.peak())
     print(stck_link_list.pop())
     print(stck_link_list.size())
+    print('------------------------------------------------')
+
+    stck_sll = StackUsingSLL()
+    stck_sll.push(10)
+    stck_sll.push(20)
+    stck_sll.push(30)
+    print(stck_sll.pop())
+    print(stck_sll.peak())
+    print(stck_sll.size())
