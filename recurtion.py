@@ -105,6 +105,15 @@ def squere(n):
     return n * n + squere(n - 1)
 
 
+def reverse_string(str_val: str, len_str: int) -> None:
+    '''
+    Reverse the string without loop
+    '''
+    if len_str:
+        print(str_val[len_str - 1], end='')
+        reverse_string(str_val, len_str - 1)
+
+
 if __name__ == "__main__":
     print(factorial(10))
     printN(10)
@@ -123,3 +132,5 @@ if __name__ == "__main__":
     print(sumofnaturalnumberodd(10))
     print(sumofnaturalnumbereven(10))
     print(squere(10))
+    name = 'sidharth sahoo'
+    reverse_string(name, len(name))
