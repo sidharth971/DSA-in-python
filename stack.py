@@ -1,8 +1,8 @@
 '''
 @Sidharth Sahoo
-Stack is a linear data stature which follows last in and fast out principle.
+Stack is a linear data stature which follows last in and fast out (LIFO/FILO) principle.
 '''
-from DSA.DSA_in_python.sll import SLL
+from .sll import SLL
 
 
 class StackUsingList(list):

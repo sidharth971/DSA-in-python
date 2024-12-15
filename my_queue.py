@@ -65,21 +65,21 @@ class QueueUsingLinkList:
         elif self.front == self.rear:
             val = self.front.item
             self.front = self.rear = None
-            return val
         else:
             val = self.front.item
             self.front = self.front.next
-            return val
-        self.count - + 1
+
+        self.count -= 1
+        return val
 
     def get_first(self):
         if self.is_empty():
-            raise IndexErro('No record found!')
+            raise IndexError('No record found!')
         return self.front.item
 
     def get_rear(self):
         if self.is_empty():
-            raise IndexErro('No record found!')
+            raise IndexError('No record found!')
         return self.rear.item
 
     def size(self):
